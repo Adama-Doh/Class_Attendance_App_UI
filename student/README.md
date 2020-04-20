@@ -1,6 +1,8 @@
 # student
 
-A new Flutter project.
+Do this before running the app on your device:
+  
+  - flutter clean && flutter run
 
 ## Getting Started
 

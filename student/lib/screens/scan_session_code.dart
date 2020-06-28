@@ -3,7 +3,7 @@ import 'package:student/components/customTextField.dart';
 import 'package:student/components/gradientButton.dart';
 import 'package:student/screens/confirm_attendance.dart';
 import 'package:student/screens/confirm_attendance.dart';
-import '../globals/session_requesrs.dart';
+import '../globals/session_request.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 

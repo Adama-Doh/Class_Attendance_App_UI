@@ -28,7 +28,7 @@ class _ScaningPageState extends State<ScaningPage> {
 Future<Null> getSearchResult(String code,[bontext=null]) async{
   Map result =await  fetchScannCode(code);
   print(result);
-  if (result.containsKey("id")){
+  if (result.containsKey("name")){
 
             this.setState(()=>isLoading=false);
             Navigator.push(

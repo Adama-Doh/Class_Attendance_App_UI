@@ -10,7 +10,7 @@ bool isLoading =false;
   try{
     http.Response response = await http.get(url);
     Map jsonResponse = convert.jsonDecode(response.body);
-    if(jsonResponse.containsKey('id')){
+    if(jsonResponse.containsKey('name')){
       // print(jsonResponse);
       return jsonResponse;
     }else{
@@ -20,3 +20,20 @@ bool isLoading =false;
     return {'error':'Opps Network Erorr or Server'};
   } 
 }
+
+// geoLocate
+Future<Map> fetchPlace(Map codinate) async{
+  String url = 'https://api.opencagedata.com/geocode/v1/json?q=${codiname["lat"]}+${codinate["log"]}&key=556bf96f117d446eb6bc70a87f9aa2a7';
+
+  try{
+    http.Response response = await http.get(url);
+    Map jsonResponse = convert.jsonDecode(response.body);
+    print(jsonResponse);
+    if(response.statusCode==200){
+    return jsonResponse;}
+  }catch(error){
+    return {'error':'Opps Network Erorr or Server'};
+  } 
+}
+
+

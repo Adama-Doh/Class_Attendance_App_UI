@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student/screens/attendance_receipt.dart';
+import 'package:student/globals/session_request.dart';
 
 class ConfirmAttendance extends StatelessWidget {
  final  Map eventInfor;
@@ -96,7 +97,7 @@ class ConfirmAttendance extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      'Lecture Hall G5.',
+                      'Lecture Hall G5',
                       style: TextStyle(fontSize: 18),
                     )
                   ],
@@ -116,7 +117,7 @@ class ConfirmAttendance extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '25/03/2020. 12:37pm',
+                      '${eventInfor.containsKey("startTime") && eventInfor["startTime"]!=""?eventInfor["startTime"]:"00:00"} - ${eventInfor.containsKey("endTime") && eventInfor["endTime"]!=""?eventInfor["startTime"]:"00:00"}',
                       style: TextStyle(fontSize: 18),
                     )
                   ],

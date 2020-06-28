@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:student/screens/attendance_receipt.dart';
 
 class ConfirmAttendance extends StatelessWidget {
-  const ConfirmAttendance({Key key}) : super(key: key);
+ final  Map eventInfor;
+   ConfirmAttendance({Key key,this.eventInfor=null}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class ConfirmAttendance extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      'Artificial Intelligence.',
+                      '${eventInfor.containsKey("name") && eventInfor["name"]!=""?eventInfor["name"]:"unknown"}',
                       style: TextStyle(fontSize: 18),
                     )
                   ],
@@ -55,7 +56,7 @@ class ConfirmAttendance extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      'Alex Atuobi.',
+                      '${eventInfor.containsKey("lectureName") && eventInfor["lectureName"]!=""?eventInfor["lectureName"]:"unknown"}',
                       style: TextStyle(fontSize: 18),
                     )
                   ],

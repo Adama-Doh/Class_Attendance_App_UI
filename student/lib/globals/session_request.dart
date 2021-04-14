@@ -1,11 +1,11 @@
- import 'dart:convert' as convert;
+import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 
 bool isLoading =false;
 
  
  Future<Map> fetchScannCode(String code) async{
-  String url = 'https://legon-attendance.herokuapp.com/event/find/t/${code}';
+  String url = 'https://legon-attendance.herokuapp.com/event/find/t/$code';
 
   try{
     http.Response response = await http.get(url);
@@ -33,7 +33,9 @@ Future<Map> fetchPlace(Map codinate) async{
     return jsonResponse;}
   }catch(error){
     return {'error':'Opps Network Erorr or Server'};
-  } 
+  }
+
+  return codinate;
 }
 
 
